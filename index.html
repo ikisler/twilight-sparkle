@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twilight Sparkle Reading</title>
+	<style type="text/css">
+		.container {
+			margin: 100px;
+			height: 200px;
+			position: relative;
+		}
+
+		.body {
+			background-color: #b290c3;
+			width: 120px;
+			height: 100px;
+			border-radius: 150px;
+
+			position: absolute;
+			top: 90px;
+			left: 15px;
+		}
+
+		@-webkit-keyframes head-move {
+			0% { top: 0px; }
+			25% { top: 5px; }
+			75% { top: 5px; }
+			100% { top: 0px; }
+		}
+
+		@-moz-keyframes head-move {
+			0% { top: 0px; }
+			25% { top: 5px; }
+			75% { top: 5px; }
+			100% { top: 0px; }
+		}
+
+		@-o-keyframes head-move {
+			0% { top: 0px; }
+			25% { top: 5px; }
+			75% { top: 5px; }
+			100% { top: 0px; }
+		}
+
+		@keyframes head-move {
+			0% { top: 0px; }
+			25% { top: 5px; }
+			75% { top: 5px; }
+			100% { top: 0px; }
+		}
+
+		.head-base {
+			background-color: #cca9d1;
+			width: 150px;
+			height: 150px;
+			border-radius: 75px;
+			position: relative;
+			box-shadow: 0 1px 3px 0px #9462ab;
+
+			-webkit-animation: head-move 8s infinite;
+			-moz-animation: head-move 8s infinite;
+			-o-animation: head-move 8s infinite;
+			animation: head-move 8s infinite;
+		}
+
+		.horn {
+			position: absolute;
+			left: 58px;
+			top: -25px;
+			width: 0; 
+			height: 0; 
+			border-radius: 10px;
+			border-left: 18px solid transparent;
+			border-right: 18px solid transparent;
+			border-bottom: 50px solid #cca9d1;
+		}
+
+		.eye {
+			background-color: #fff;
+			width: 40px;
+			height: 45px;
+			border-radius: 45px;
+			position: absolute;
+			box-shadow: 3px 3px 5px 2px #ddd inset, 0px 2px 1px 1px #b290c3;
+		}
+
+		.eye-1 {
+			top: 40px;
+			left: 20px;
+		}
+
+		.eye-lash-1 {
+			background-color: #000;
+			width: 38px;
+			height: 45px;
+			border-radius: 45px;
+			position: absolute;
+			top: 39px;
+			left: 23px;
+		}
+
+		.eye-lash-out-1 {
+			position: absolute;
+			width: 25px;
+			height: 15px;
+			border-radius: 25px;
+			border-bottom: solid 3px #000;
+			left: 13px;
+			top: 35px;
+		}
+
+		.eye-lash-out-2 {
+			position: absolute;
+			width: 25px;
+			height: 15px;
+			border-radius: 25px;
+			border-bottom: solid 3px #000;
+			left: 13px;
+			top: 40px;
+		}
+
+		.eye-2 {
+			top: 40px;
+			right: 20px;
+		}
+
+		.eye-lash-2 {
+			background-color: #000;
+			width: 38px;
+			height: 45px;
+			border-radius: 45px;
+			position: absolute;
+			top: 39px;
+			left: 89px;
+		}
+
+		.eye-lash-out-3 {
+			position: absolute;
+			width: 25px;
+			height: 15px;
+			border-radius: 25px;
+			border-bottom: solid 3px #000;
+			left: 113px;
+			top: 35px;
+		}
+
+		.eye-lash-out-4 {
+			position: absolute;
+			width: 25px;
+			height: 15px;
+			border-radius: 25px;
+			border-bottom: solid 3px #000;
+			left: 113px;
+			top: 40px;
+		}
+
+		@-webkit-keyframes eye-move {
+			0% { left: 10px; }
+			25% { left: 5px; }
+			75% { left: 18px; }
+			100% { left: 10px; }
+		}
+
+		@-moz-keyframes eye-move {
+			0% { left: 10px; }
+			25% { left: 5px; }
+			75% { left: 18px; }
+			100% { left: 10px; }
+		}
+
+		@-o-keyframes eye-move {
+			0% { left: 10px; }
+			25% { left: 5px; }
+			75% { left: 18px; }
+			100% { left: 10px; }
+		}
+
+		@keyframes eye-move {
+			0% { left: 10px; }
+			25% { left: 5px; }
+			75% { left: 18px; }
+			100% { left: 10px; }
+		}
+
+		.pupil {
+			background-color: #702c93;
+			width: 15px;
+			height: 15px;
+			border-radius: 15px;
+			position: absolute;
+			top: 25px;
+			left: 10px;
+
+			-webkit-animation: eye-move 5s infinite;
+			-moz-animation: eye-move 5s infinite;
+			-o-animation: eye-move 5s infinite;
+			animation: eye-move 5s infinite;
+		}
+
+		.ear {
+			background-color: #cca9d1;
+			position: absolute;
+			width: 50px;
+			height: 75px;
+			top: -10px;
+		}
+
+		.ear-1 {
+			border-top-left-radius: 80px;
+			border-top-right-radius: 10px;
+			border-bottom-left-radius: 25px;
+			left: -10px;
+			transform: rotate(-12deg);
+		}
+
+		.ear-2 {
+			border-top-right-radius: 80px;
+			border-top-left-radius: 10px;
+			border-bottom-right-radius: 25px;
+			right: -10px;
+			transform: rotate(12deg);
+		}
+
+		.nose-1 {
+			position: absolute;
+			width: 25px;
+			height: 15px;
+			border-radius: 25px;
+			border-top: solid 3px #b290c3;
+			left: 63px;
+			top: 80px;
+		}
+
+		.nose-2, .nose-3 {
+			position: absolute;
+			width: 8px;
+			height: 15px;
+			border-radius: 25px;
+			border-top: solid 3px #b290c3;
+			top: 85px;
+		}
+
+		.nose-2 {
+			left: 73px;
+			transform: rotate(120deg);
+		}
+
+		.nose-3 {
+			left: 69px;
+			transform: rotate(-120deg);
+		}
+
+		.mouth {
+			position: absolute;
+			width: 35px;
+			height: 10px;
+			border-radius: 5px;
+			border-bottom: solid 3px #b290c3;
+			left: 58px;
+			top: 110px;
+		}
+
+		.arm-container {
+			width: 150px;
+			height: 50px;
+			position: absolute;
+			bottom: 0;
+		}
+
+		.arm {
+			background-color: #cca9d1;
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			position: absolute;
+
+			box-shadow: 0 3px 2px #b290c3;
+		}
+
+		.arm-1 {
+			top: 0;
+			left: 0;
+		}
+
+		.arm-2 {
+			top: 0;
+			right: 0;
+		}
+
+		.hair {
+			position: absolute;
+		}
+
+		.hair-1 {
+			background-color: #363b73;
+			width: 130px;
+			height: 50px;
+
+			border-top-left-radius: 150px;
+			border-top-right-radius: 150px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+
+			top: -5px;
+			left: 10px;
+			position: absolute;
+
+			box-shadow: 0 3px 2px #b290c3;
+		}
+
+		.hair-2 {
+			background-color: #ef4e91;
+			width: 50px;
+			height: 50px;
+
+			border-top-left-radius: 150px;
+			border-top-right-radius: 150px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 30px;
+
+			top: -5px;
+			left: 70px;
+			position: absolute;
+		}
+
+		.hair-3 {
+			background-color: #6e2a8d;
+			width: 50px;
+			height: 50px;
+
+			border-top-left-radius: 150px;
+			border-top-right-radius: 150px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+
+			top: -5px;
+			left: 55px;
+			position: absolute;
+		}
+
+		.hair-4 {
+			background-color: #363b73;
+			width: 50px;
+			height: 50px;
+
+			border-top-left-radius: 150px;
+			border-top-right-radius: 150px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 30px;
+
+			top: -5px;
+			left: 40px;
+			position: absolute;
+		}
+
+		.book-container {
+			position: absolute;
+		}
+
+		.side-left {
+			background-color: #963;
+			width: 120px;
+			height: 13px;
+
+			border-bottom: solid 5px #734d26;
+
+			position: absolute;
+			left: -50px;
+			transform: rotate(20deg);
+		}
+
+		.paper-left {
+			background-color: #ddd;
+			width: 120px;
+			height: 5px;
+
+			border-bottom: solid 2px #777;
+
+			position: absolute;
+			left: -45px;
+			top: -5px;
+			transform: rotate(20deg);
+		}
+
+		.side-right {
+			background-color: #963;
+			width: 120px;
+			height: 13px;
+
+			border-bottom: solid 5px #734d26;
+
+			position: absolute;
+			left: 70px;
+			transform: rotate(-20deg);
+		}
+
+		.paper-right {
+			background-color: #ddd;
+			width: 120px;
+			height: 5px;
+
+			border-bottom: solid 2px #777;
+
+			position: absolute;
+			left: 65px;
+			top: -5px;
+			transform: rotate(-20deg);
+		}
+
+		.side-bottom {
+			background-color: #963;
+			width: 40px;
+			height: 15px;
+
+			border-bottom: solid 5px #734d26;
+
+			position: absolute;
+			left: 50px;
+			top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="body"></div>
+		<div class="head-base">
+			<div class="ear ear-1"></div>
+			<div class="ear ear-2"></div>
+
+			<div class="eye-lash-1"></div>
+			<div class="eye-lash-out-1"></div>
+			<div class="eye-lash-out-2"></div>
+			<div class="eye eye-1">
+				<div class="pupil pupil-1"></div>
+			</div>
+
+			<div class="eye-lash-2"></div>
+			<div class="eye-lash-out-3"></div>
+			<div class="eye-lash-out-4"></div>
+			<div class="eye eye-2">
+				<div class="pupil pupil-2"></div>
+			</div>
+
+			<div class="hair">
+				<div class="hair-1"></div>
+				<div class="hair-2"></div>
+				<div class="hair-3"></div>
+				<div class="hair-4"></div>
+			</div>
+
+			<div class="horn"></div>
+
+			<div class="nose-1"></div>
+			<div class="nose-2"></div>
+			<div class="nose-3"></div>
+
+			<div class="mouth"></div>
+		</div>
+
+		<div class="arm-container">
+			<div class="arm arm-1"></div>
+			<div class="arm arm-2"></div>
+		</div>
+
+		<div class="book-container">
+			<div class="paper-left"></div>
+			<div class="side-left"></div>
+			<div class="paper-right"></div>
+			<div class="side-right"></div>
+			<div class="side-bottom"></div>
+		</div>
+	</div>
+</body>
+
+</html>
